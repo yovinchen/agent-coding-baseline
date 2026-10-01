@@ -1,0 +1,73 @@
+{
+  "$comment": "上游来源清单。scripts/sync-upstream.py 按 paths 把上游文件同步到 vendor/<id>/，提交记录写入 skills.lock.json。",
+  "upstreams": [
+    {
+      "id": "jakubkrehel-skills",
+      "repository": "https://github.com/jakubkrehel/skills",
+      "homepage": "https://jakub.kr/skills",
+      "author": "Jakub Krehel",
+      "license": "MIT",
+      "paths": {
+        "skills": "skills",
+        "LICENSE": "LICENSE"
+      },
+      "skills": [
+        "better-interface",
+        "better-accessibility",
+        "better-colors",
+        "better-layout",
+        "better-typography",
+        "better-ui",
+        "better-writing",
+        "interface-review",
+        "break",
+        "variant",
+        "explain-interface"
+      ],
+      "scope": "user",
+      "licenseFile": "LICENSE"
+    },
+    {
+      "id": "impeccable",
+      "repository": "https://github.com/pbakaus/impeccable",
+      "homepage": "https://impeccable.style",
+      "author": "Paul Bakaus",
+      "license": "Apache-2.0",
+      "paths": {
+        "skills": "plugin/skills",
+        "agents": "plugin/agents",
+        "hooks": "plugin/hooks",
+        "LICENSE": "LICENSE",
+        "NOTICE.md": "NOTICE.md"
+      },
+      "skills": [
+        "impeccable"
+      ],
+      "scope": "project",
+      "licenseFile": "LICENSE"
+    },
+    {
+      "id": "vercel-agent-skills",
+      "repository": "https://github.com/vercel-labs/agent-skills",
+      "author": "Vercel",
+      "license": "MIT",
+      "licenseFile": "README.md",
+      "$licenseNote": "上游无 LICENSE 文件，许可证声明在 README.md 的 License 小节",
+      "paths": {
+        "skills/web-design-guidelines": "skills/web-design-guidelines",
+        "README.md": "README.md"
+      },
+      "skills": [
+        "web-design-guidelines"
+      ],
+      "scope": "user"
+    }
+  ],
+  "own": [
+    {
+      "name": "commit",
+      "path": "user/claude/commands/commit.md",
+      "target": "~/.claude/commands/commit.md"
+    }
+  ]
+}
